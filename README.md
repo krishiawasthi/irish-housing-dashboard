@@ -51,8 +51,7 @@ Google Looker Studio · openpyxl
 
 ## Project structure
 
-'''
-
+```
 irish-housing-dashboard/
 ├── data/
 │   ├── raw/
@@ -72,7 +71,7 @@ irish-housing-dashboard/
 │   └── queries.sql                        # All SQL queries
 ├── dashboard.png                          # Dashboard screenshot
 └── README.md
-'''
+``` 
 ---
 
 ## How to run
