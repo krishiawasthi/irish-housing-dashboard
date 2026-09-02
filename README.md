@@ -1,29 +1,86 @@
-Irish Housing Market — SQL Analytics Dashboard
+# Irish Housing Market — SQL Analytics Dashboard
+
+An end-to-end data analytics project analysing 287,590 residential 
+property transactions from Ireland's Property Price Register (2010–2026), 
+built using Python, SQLite, SQL, and Google Looker Studio.
+
+---
+
+## Live Dashboard
+
+**[View Interactive Dashboard on Google Looker Studio](YOUR_LOOKER_STUDIO_LINK_HERE)**
+
+![Irish Housing Market Dashboard](dashboard.png)
+
+---
 
 ## What this project does
-Analyses 500,000+ residential property transactions from Ireland's
-Property Price Register using SQL and Python. Results are visualised
-in an interactive Power BI dashboard.
+
+Collects, cleans, and analyses 16 years of Irish residential property 
+sales data to surface insights on price trends, regional disparities, 
+new build vs second-hand dynamics, and the Dublin premium.
+
+---
 
 ## Business questions answered
+
 - Which county has the highest average house price?
 - How have prices changed year over year since 2010?
-- What is the total volume of sales per year?
+- What is the Dublin premium over the rest of Ireland?
+- How do new build prices compare to second-hand properties?
+- Which years saw the biggest price increases and crashes?
 
-## Tools used
-Python · SQLite · pandas · SQL (CTEs, window functions) · Power BI
+---
 
 ## Key findings
-- Dublin consistently has the highest average price (€XXX,XXX in 2023)
-- Prices peaked in 20XX and dipped in 20XX following [brief context]
-- Cork and Galway show the next highest average prices
+
+- Dublin average price (€455K) is nearly double the national average
+- Prices crashed 12% in 2011 and 8% in 2012 following the financial crisis
+- Strong recovery from 2013, with prices rising consistently to 2026
+- New builds command a significant premium over second-hand properties
+- Longford is the most affordable county; Wicklow and Kildare follow Dublin
+
+---
+
+## Tools used
+
+Python · SQLite · pandas · SQL (CTEs, window functions, aggregations) · 
+Google Looker Studio · openpyxl
+
+---
+
+## Project structure
+
+irish-housing-dashboard/
+├── data/
+│ ├── raw/ # Raw CSV from Property Price Register
+│ └── processed/ # SQLite database and query output CSVs
+├── notebooks/
+│ ├── load_data.py # Cleans and loads data into SQLite
+│ └── run_queries.py # Runs SQL queries and exports CSVs
+├── sql/
+│ └── queries.sql # All SQL queries
+└── README.md
+
+---
 
 ## How to run
+
 1. Clone this repo
-2. Download PPR data from data.gov.ie and save to data/raw/
-3. Run: python notebooks/load_data.py
-4. Run: python notebooks/run_queries.py
-5. Open dashboard/housing.pbix in Power BI Desktop
+2. Download the Property Price Register dataset from 
+   [Kaggle](https://www.kaggle.com/datasets/fionnhughes/property-price-register) 
+   and save to `data/raw/property_price_register.csv`
+3. Run: `python3 notebooks/load_data.py`
+4. Run: `python3 notebooks/run_queries.py`
+5. Open the Looker Studio dashboard link above
+
+---
 
 ## Skills demonstrated
-Advanced SQL · Data cleaning with pandas · Power BI · SQLite
+
+- Data cleaning and transformation with Python and pandas
+- Database design and SQL querying (CTEs, window functions, 
+  year-over-year analysis)
+- Business intelligence and dashboard design in Google Looker Studio
+- End-to-end analytics pipeline from raw data to interactive visualisation
+- Working with large real-world government datasets (287,590 rows)
