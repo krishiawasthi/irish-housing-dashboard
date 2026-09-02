@@ -8,9 +8,9 @@ built using Python, SQLite, SQL, and Google Looker Studio.
 
 ## Live Dashboard
 
-**[View Interactive Dashboard on Google Looker Studio](YOUR_LOOKER_STUDIO_LINK_HERE)**
+**[View Interactive Dashboard on Google Looker Studio](https://datastudio.google.com/reporting/e9627e9d-70a2-4cdf-9331-0f4c5c40ef32)**
 
-![Irish Housing Market Dashboard](dashboard.png)
+![Irish Housing Market Dashboard](image)
 
 ---
 
