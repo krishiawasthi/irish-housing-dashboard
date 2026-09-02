@@ -53,13 +53,22 @@ Google Looker Studio · openpyxl
 
 irish-housing-dashboard/
 ├── data/
-│ ├── raw/ # Raw CSV from Property Price Register
-│ └── processed/ # SQLite database and query output CSVs
+│   ├── raw/
+│   │   └── property_price_register.csv    # Source data (785,993 rows, 2010-2026)
+│   └── processed/
+│       ├── housing.db                     # SQLite database (287,590 clean rows)
+│       ├── avg_by_county.csv              # Average price per county
+│       ├── trend_by_year.csv              # Yearly price trend
+│       ├── yoy_change.csv                 # Year-on-year % change
+│       ├── new_vs_secondhand.csv          # New build vs second-hand analysis
+│       ├── dublin_vs_rest.csv             # Dublin vs rest of Ireland
+│       └── monthly_trend.csv             # Monthly transaction volume
 ├── notebooks/
-│ ├── load_data.py # Cleans and loads data into SQLite
-│ └── run_queries.py # Runs SQL queries and exports CSVs
+│   ├── load_data.py                       # Cleans and loads data into SQLite
+│   └── run_queries.py                     # Runs SQL queries, exports CSVs
 ├── sql/
-│ └── queries.sql # All SQL queries
+│   └── queries.sql                        # All SQL queries
+├── dashboard.png                          # Dashboard screenshot
 └── README.md
 
 ---
@@ -84,4 +93,3 @@ irish-housing-dashboard/
 - Business intelligence and dashboard design in Google Looker Studio
 - End-to-end analytics pipeline from raw data to interactive visualisation
 - Working with large real-world government datasets (287,590 rows)
->>>>>>> 9615b6eb1df91d666e09a27a0160fbf6acbc7196
